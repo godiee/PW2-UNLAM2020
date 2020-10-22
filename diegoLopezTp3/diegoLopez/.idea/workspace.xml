@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4ed62c2-2e56-4f2c-8ed3-2c5b5cc70b0b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1hqIQffms5qPsieuhCM0lxOxpOb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/ProgramacionWeb2/pw2-docker-example-master" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExampleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="ExampleTest" file="$USER_HOME$/Escritorio/ProgramacionWeb2/pw2-docker-example-master/app/test/example/ExampleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.ExampleTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4ed62c2-2e56-4f2c-8ed3-2c5b5cc70b0b" name="Default Changelist" comment="" />
+      <created>1600732182040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600732182040</updated>
+      <workItem from="1600732183652" duration="33000" />
+      <workItem from="1600732253402" duration="478000" />
+      <workItem from="1600732947319" duration="581000" />
+      <workItem from="1600733725767" duration="78000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="302" y="57" width="824" height="691" key="#CLI_Interpreters" timestamp="1600733414124">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="302" y="57" width="824" height="691" key="#CLI_Interpreters/72.27.1294.741@72.27.1294.741" timestamp="1600733414124" />
+    <state x="177" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600732289907">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="177" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1600732289907" />
+    <state x="586" y="329" width="307" height="231" key="DockerComposeFileDialog" timestamp="1600733411552">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="586" y="329" width="307" height="231" key="DockerComposeFileDialog/72.27.1294.741@72.27.1294.741" timestamp="1600733411552" />
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600733514982">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1600733514982" />
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1600733417026">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1600733417026" />
+    <state x="191" y="27" width="618" height="741" key="find.popup" timestamp="1600733482355">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="191" y="27" width="618" height="741" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1600733482355" />
+  </component>
+</project>
