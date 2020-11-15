@@ -1,18 +1,19 @@
 <?php
-    $usario = "pw2";
-    $password = "123456";
-    $bd = "pokemons_Lopez_diego";
-    $port = "3306";
+?>
 
-$conexion = mysqli_connect("PW2-mysql",$usario,$password,$bd,$port) or die("Error al conectarse");
-
-$sql = "SELECT gif FROM pokemon";
-
-$consulta = mysqli_query($conexion , $sql);
-
-while ($resultado = $consulta->fetch_assoc()){
-    echo "<img class='w3-image' src='$resultado[gif]' alt='foto'>" . "Su ruta es $resultado[gif]" . "<br>";
-}
-
-mysqli_close($conexion); //cerrar conexion
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Diego Lopez Tp3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<main>
+    <form action="buscarPokemon.php" method="post">
+        <input type="text" name="pokemonABuscar" placeholder="Ingrese número o nombre de pokemon" >
+        <input type="submit" value="Buscar">
+    </form>
+</main>
+</body>
+</html>
