@@ -1,9 +1,13 @@
 <?php
-include_once ("BaseDeDatos.php");
-$consultar = new BaseDeDatos();
+session_start();
 
-$resultado = $consultar->conectarUsuario($_POST["usuario"], md5($_POST["clave"]));
-if ($resultado){
-    session_start();
-    $_SESSION["Usuario"] = $resultado["user_name"];
+if ($_GET["logout"]){
+    unset($_SESSION["usuario"]);
+}else{
+    include_once ("BaseDeDatos.php");
+    $consultar = new BaseDeDatos();
+    $resultado = $consultar->conectarUsuario($_POST["usuario"], md5($_POST["clave"]));
+    $_SESSION["usuario"] = $resultado ? $resultado["user_name"] : "Error";
 }
+
+header("Location: index.php");

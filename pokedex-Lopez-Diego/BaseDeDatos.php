@@ -40,7 +40,6 @@ class BaseDeDatos
         }else{
             $pokemon = $this->dameTodosLosPokemons();
             $_SESSION["error"] = 1;
-            //echo "<script>alert('Pokemon no encontrado');</script>";
         }
 
         return $pokemon;
@@ -58,5 +57,16 @@ class BaseDeDatos
         }
         mysqli_close($this->conexion);
         return $lista;
+    }
+
+    public function conectarUsuario($usuario,$clave){
+        $this->conexion();
+        $consulta = $this->conexion->query("SELECT user_name 
+                                            FROM usuario 
+                                            WHERE user_name = '$usuario' AND clave = '$clave'");
+        $usuario = $consulta->fetch_assoc();
+        mysqli_close($this->conexion);
+
+        return $usuario;
     }
 }
