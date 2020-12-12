@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class BaseDeDatos
 {
@@ -23,7 +24,7 @@ class BaseDeDatos
             mysqli_close($this->conexion);
         }else{
             $pokemon = $this->dameTodosLosPokemons();
-            echo "<script>alert('Pokemon no encontrado');</script>";
+            $_SESSION["error"] = 1;
 
         }
         return $pokemon;
@@ -38,7 +39,8 @@ class BaseDeDatos
             mysqli_close($this->conexion);
         }else{
             $pokemon = $this->dameTodosLosPokemons();
-            echo "<script>alert('Pokemon no encontrado');</script>";
+            $_SESSION["error"] = 1;
+            //echo "<script>alert('Pokemon no encontrado');</script>";
         }
 
         return $pokemon;
