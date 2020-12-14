@@ -13,4 +13,19 @@ if($pokemonABuscar == ""){
     $_SESSION["pokemon"] = $consultas->buscarPokemonPorNombre($pokemonABuscar);
 }
 
-isset($_GET["id"]) && isset($_SESSION["usuario"]) ? header("Location: ../../index.php?accion=1") : header("Location: ../../index.php");
+if (isset($_GET["id"]) && isset($_SESSION["usuario"])){
+    switch ($_GET["accion"]){
+        case 1:
+            header("Location: ../../index.php?accion=1");
+            break;
+        case 2:
+            header("Location: ../../index.php?accion=3");
+            break;
+        default:
+            header("Location: ../../index.php");
+            break;
+    }
+}else{
+    header("Location: ../../index.php");
+}
+

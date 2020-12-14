@@ -69,4 +69,33 @@ class BaseDeDatos
 
         return $usuario;
     }
+
+    public function insertarPokemon($id,$nombre,$gif,$tipo,$descripcion,$imagen){
+        $this->conexion();
+        $result = $this->conexion->query("INSERT INTO pokemon(idPokemon,nombre,gif,tipo,descripcion,imagen)
+                                            VALUES($id,'$nombre','$gif','$tipo','$descripcion','$imagen')");
+        mysqli_close($this->conexion);
+        return $result;
+    }
+
+    public function modificarPokemon($id,$nombre,$gif,$tipo,$descripcion,$imagen,$destino){
+        $this->conexion();
+        $result = $this->conexion->query("UPDATE pokemon
+                                            SET idPokemon = $id,
+                                                nombre = '$nombre',
+                                                gif = '$gif',
+                                                tipo = '$tipo',
+                                                descripcion = '$descripcion',
+                                                imagen = '$imagen'
+                                            WHERE idPokemon = $destino");
+        mysqli_close($this->conexion);
+        return $result;
+    }
+
+    public function eliminarPokemon($id){
+        $this->conexion();
+        $result = $this->conexion->query("DELETE FROM pokemon WHERE idPokemon = $id");
+        mysqli_close($this->conexion);
+        return $result;
+    }
 }
