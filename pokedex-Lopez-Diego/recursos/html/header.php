@@ -17,10 +17,10 @@
 <div class="w3-top">
     <div class="w3-bar w3-red w3-card w3-left-align w3-large">
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+        <a href="index.php" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
         <?php
         if (is_null($_SESSION["usuario"])){
-            echo "<form action='recursos/funcionalidades/procesarUsuario.php' class='w3-bar-item' method='post'>
+            echo "<form action='procesarUsuario.php' class='w3-bar-item' method='post'>
                     <label for='user'>Usuario:
                     <input type='text' name='usuario'>
                     </label>
@@ -30,7 +30,7 @@
                     <input type='submit' value='Log in'>
                   </form>";
         }else{
-            echo "<a href='recursos/funcionalidades/procesarUsuario.php?logout=1' class='w3-bar-item w3-button w3-padding-large w3-white w3-right'>". $_SESSION["usuario"]."</a>";
+            echo "<a href='procesarUsuario.php?logout=1' class='w3-bar-item w3-button w3-padding-large w3-white w3-right'>". $_SESSION["usuario"]."</a>";
         }
 
         ?>
@@ -38,14 +38,14 @@
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="index.php" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
     <h1 class="w3-margin w3-jumbo">POKEDEX</h1>
-    <form action="recursos/funcionalidades/buscarPokemon.php" method="post">
+    <form action="buscarPokemon.php" method="post">
         <input type="text" name="pokemonABuscar" placeholder="Ingrese número o nombre de pokemon" class="w3-input">
         <input type="submit" value="Quien es este pokemon?" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
     </form>

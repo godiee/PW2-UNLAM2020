@@ -10,4 +10,4 @@ if ($_GET["logout"]){
     $_SESSION["usuario"] = $resultado ? $resultado["user_name"] : "Error";
 }
 
-header("Location: ../../index.php");
+header("Location: index.php");

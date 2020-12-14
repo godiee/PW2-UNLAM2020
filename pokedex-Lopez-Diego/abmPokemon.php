@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once ("BaseDeDatos.php");
+require_once("BaseDeDatos.php");
 $consultas = new BaseDeDatos();
 
-if (is_null($_SESSION["usuario"])) header("Location: ../../index.php");
+if (is_null($_SESSION["usuario"])) header("Location: index.php");
 
 switch ($_POST["accion"]){
     case "insertar":
@@ -18,4 +18,4 @@ switch ($_POST["accion"]){
 
 }
 $_SESSION["abm"] = $result ? "Operacion exitosa." : "No se pudo realizar la operacion.";
-header("Location: ../../index.php");
+header("Location: index.php");

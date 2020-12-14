@@ -1,6 +1,6 @@
 <?php
-include_once("recursos/funcionalidades/BaseDeDatos.php");
-include_once("recursos/funcionalidades/f_mostrarTabla.php");
+include_once("BaseDeDatos.php");
+include_once("f_mostrarTabla.php");
 session_start();
 $consultas = new BaseDeDatos();
 $pokemon = is_null($_SESSION["pokemon"]) ? $pokemon = $consultas->dameTodosLosPokemons() : $_SESSION["pokemon"];
@@ -17,7 +17,7 @@ if ($_SESSION["usuario"] == "Error"){
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
-    <div class="w3-content">
+    <div class="w3-content w3-row">
         <?php
         switch ($_GET["accion"]){
             //MODIFICA POKEMON
@@ -34,7 +34,7 @@ if ($_SESSION["usuario"] == "Error"){
                 $descripcion = $pokemon[0]["descripcion"];
 
                 echo "<h1>Modificar Pokemon</h1>";
-                echo "<form action='recursos/funcionalidades/abmPokemon.php' method='POST' class='w3-container'>
+                echo "<form action='abmPokemon.php' method='POST' class='w3-container'>
                       <input type='hidden' value='modificar' name='accion'>
                       <input type='hidden' value='$id' name='id_original'>
                       <p>
@@ -97,7 +97,7 @@ if ($_SESSION["usuario"] == "Error"){
                 }
 
                 echo "<h1>Nuevo Pokemon</h1>";
-                echo "<form action='recursos/funcionalidades/abmPokemon.php' method='POST' class='w3-container'>
+                echo "<form action='abmPokemon.php' method='POST' class='w3-container'>
                       <input type='hidden' value='insertar' name='accion'>
                       <p>
                       <label>Numero
@@ -159,7 +159,7 @@ if ($_SESSION["usuario"] == "Error"){
                     break;
                 }
                 echo "<p>Estas seguro de eliminar al siguiente pokemon: $nombre?</p>";
-                echo "<form action='recursos/funcionalidades/abmPokemon.php' method='POST' class='w3-container'>
+                echo "<form action='abmPokemon.php' method='POST' class='w3-container'>
                         <input type='hidden' value='eliminar' name='accion'>
                         <input type='hidden' value='$id' name='id'>
                         <input class='w3-radio' type='radio' name='delete' value='true' checked>
@@ -170,6 +170,27 @@ if ($_SESSION["usuario"] == "Error"){
                         <input type='submit' value='Enviar' class='w3-button w3-red'>
                       </form>";
                 break;
+            //DETALLE POKEMON
+            case 4:
+                $id = $pokemon[0]["idPokemon"];
+                $nombre = $pokemon[0]["nombre"];
+                $imagen = $pokemon[0]["gif"];
+                $imagenInterna = $pokemon[0]["imagen"];
+                $tipo = $pokemon[0]["tipo"];
+                $descripcion = $pokemon[0]["descripcion"];
+
+                echo "<div class='w3-quarter w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-black'>
+                        <img src='$imagenInterna' alt='Pokemon' class='w3-image w3-bottombar w3-border-black'>
+                        <h4 class='w3-center'>$nombre</h4>
+                      </div>".
+                      "<div class='w3-rest w3-panel w3-gray'>
+                            <p>Numero de pokemon: $id</p>
+                            Tipo:<img src='$tipo' alt='tipo'>
+                            <h2>Descripcion</h2>
+                            <p>$descripcion</p>
+                      </div>";
+                break;
+
             //MUESTRA POKEMONS
             default:
                 if (isset($_SESSION["abm"])){
@@ -194,6 +215,7 @@ if ($_SESSION["usuario"] == "Error"){
                 break;
         }
         ?>
+    </div>
 </div>
 
 <?php require_once ("recursos/html/footer.php")?>
